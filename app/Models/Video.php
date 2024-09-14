@@ -4,10 +4,11 @@ namespace App\Models;
 
 use MongoDB\Laravel\Eloquent\Model;
 
-class Test extends Model
+class Video extends Model
 {
+    protected $collection = "video";
     protected $fillable = [
         'ten',
-        'phone'
+        'link',
     ];
 }

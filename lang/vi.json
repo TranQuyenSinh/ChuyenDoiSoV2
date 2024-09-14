@@ -1,3 +1,26 @@
 {
-    "welcome": "Xin chào from json"
+    "Thêm": "Thêm",
+    "Sửa": "Sửa",
+    "Xoá": "Xoá",
+    "Lưu": "Lưu",
+    "Huỷ": "Huỷ",
+    "Quản lý tin tức": "Quản lý tin tức",
+    "Thêm tin tức": "Thêm tin tức",
+    "Cập nhật tin tức": "Cập nhật tin tức",
+    "Bạn có chắc muốn xoá tin tức này?": "Bạn có chắc muốn xoá tin tức này?",
+    "Thêm banner": "Thêm banner",
+    "Cập nhật banner": "Cập nhật banner",
+    "Bạn có chắc muốn xoá banner này?": "Bạn có chắc muốn xoá banner này?",
+    "Thêm lĩnh vực": "Thêm lĩnh vực",
+    "Cập nhật lĩnh vực": "Cập nhật lĩnh vực",
+    "Bạn có chắc muốn xoá lĩnh vực này?": "Bạn có chắc muốn xoá lĩnh vực này?",
+    "Thêm ngành nghề": "Thêm ngành nghề",
+    "Cập nhật ngành nghề": "Cập nhật ngành nghề",
+    "Bạn có chắc muốn xoá ngành nghề này?": "Bạn có chắc muốn xoá ngành nghề này?",
+    "Quản lý banner": "Quản lý banner",
+    "Quản lý lĩnh vực": "Quản lý lĩnh vực",
+    "Quản lý ngành nghề": "Quản lý ngành nghề",
+    "Thêm thành công": "Thêm thành công",
+    "Cập nhật thành công": "Cập nhật thành công",
+    "Xoá thành công": "Xoá thành công"
 }

@@ -8,8 +8,25 @@ use Intervention\Image\Facades\Image;
 
 class ImageController extends Controller
 {
-  //
-  function uploads(Request $request, $locale = '')
+  public static function saveImage($file)
+  {
+    if (!empty($file)) {
+      $extension = $file->getClientOriginalExtension();
+      $title = $file->getClientOriginalName();
+      $alias = date("YmdHis") . '_' . strtolower(uniqid()) . '.' . $extension;
+      $size = Storage::size('public/images/' . $alias);
+      Storage::put('public/images/' . $alias, file_get_contents($file), 'public');
+
+      return [
+        'alias' => $alias,
+        'title' => $title,
+        'type' =>  $extension,
+        'size' => $size
+      ];
+    }
+    return null;
+  }
+  function uploads(Request $request)
   {
     $files = $request->file('hinhanh_files');
     if (!empty($files)) :
@@ -51,24 +68,18 @@ class ImageController extends Controller
     endif;
   }
 
-  function delete(Request $request, $filename = '')
+  function delete($filename)
   {
-    Storage::delete('private/images/' . $filename);
-    Storage::delete('public/images/origin/' . $filename);
-    Storage::delete('public/images/thumb_360x200/' . $filename);
-    Storage::delete('public/images/thumb_50/' . $filename);
-    // Storage::delete('public/images/thumb_800x800/'.$filename);
-    // Storage::delete('public/images/thumb_785x476/'.$filename);
+    if (!empty($filename)) {
+      Storage::delete('private/images/' . $filename);
+    }
   }
 
   static function remove($filename)
   {
-    Storage::delete('private/images/' . $filename);
-    Storage::delete('public/images/origin/' . $filename);
-    Storage::delete('public/images/thumb_360x200/' . $filename);
-    Storage::delete('public/images/thumb_50/' . $filename);
-    // Storage::delete('public/images/thumb_800x800/'.$filename);
-    // Storage::delete('public/images/thumb_785x476/'.$filename);
+    if (!empty($filename)) {
+      Storage::delete('private/images/' . $filename);
+    }
   }
 
   static function save($file)
